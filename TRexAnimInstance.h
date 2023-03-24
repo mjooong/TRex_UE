@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -14,35 +14,40 @@ class TREX_API UTRexAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
 	
-		// ´Ù¸¥ ÂÊÀ» ¿ÀÇÂ ÇÏ·Á¸é ctrl + K + O
+		// ë‹¤ë¥¸ ìª½ì„ ì˜¤í”ˆ í•˜ë ¤ë©´ ctrl + K + O
 
 public:
-	// ¾Ö´Ï¸ÞÀÌ¼ÇÀ» ¾÷µ¥ÀÌÆ® ÇØÁÖ´Â °¡»óÇÔ¼öÀÇ ¿øÇüÀ» ¿À¹ö¶óÀÌµù ÇØ¼­ ¼±¾ð
-	// ºÎ¸ð Å¬·¡½ºÀÇ ÇÔ¼ö¸¦ ÀÚ½Ä Å¬·¡½º¿¡¼­ ÀçÁ¤ÀÇ ÇÏ·Á¸é °¡»óÇÔ¼ö¸¦ µ¿Àû¹ÙÀÎµùÀ¸·Î ¿À¹ö¶óÀÌµù ÇØ ÁØ´Ù.
+	// ì• ë‹ˆë©”ì´ì…˜ì„ ì—…ë°ì´íŠ¸ í•´ì£¼ëŠ” ê°€ìƒí•¨ìˆ˜ì˜ ì›í˜•ì„ ì˜¤ë²„ë¼ì´ë”© í•´ì„œ ì„ ì–¸
+	// ë¶€ëª¨ í´ëž˜ìŠ¤ì˜ í•¨ìˆ˜ë¥¼ ìžì‹ í´ëž˜ìŠ¤ì—ì„œ ìž¬ì •ì˜ í•˜ë ¤ë©´ ê°€ìƒí•¨ìˆ˜ë¥¼ ë™ì ë°”ì¸ë”©ìœ¼ë¡œ ì˜¤ë²„ë¼ì´ë”© í•´ ì¤€ë‹¤.
 
-	// ÇÔ¼ö ÀÌ¸§À» ¼±ÅÃÇÏ°í alt enter ·Î Á¤ÀÇÇØ ÁØ´Ù.
+	// í•¨ìˆ˜ ì´ë¦„ì„ ì„ íƒí•˜ê³  alt enter ë¡œ ì •ì˜í•´ ì¤€ë‹¤.
 	virtual void NativeUpdateAnimation(float DeltaTime) override;
 
 private:
-	// °´Ã¼ ÁöÇâ ¾ð¾î¿¡¼­ ¸â¹ö º¯¼ö´Â ¸â¹ö º¯¼öÀÇ º¸È£¸¦ À§ÇØ¼­ private Á¢±Ù ÁöÁ¤ÀÚ ¾È¿¡ µÐ´Ù.
-	// private Á¢±Ù ÁöÁ¤ÀÚ ¾È¿¡ ÀÖ´Â ¸â¹ö º¯¼ö´Â ÀÌ Å¬·¡½º¸¦ ºÎ¸ð Å¬·¡½º·Î »ó¼Ó¹Þ´Â ÀÚ½Ä Å¬·¡½º¿¡¼­ Á¢±Ù Á¶Â÷ ºÒ°¡´ÉÇÏ´Ù.
-	// ÇÔ¼ö¸¦ ÅëÇØ¼­ Á¢±ÙÇÑ´Ù. ÇÔ¼ö´Â ¹«Á¶°Ç publicÀÌ´Ù.
+	// ê°ì²´ ì§€í–¥ ì–¸ì–´ì—ì„œ ë©¤ë²„ ë³€ìˆ˜ëŠ” ë©¤ë²„ ë³€ìˆ˜ì˜ ë³´í˜¸ë¥¼ ìœ„í•´ì„œ private ì ‘ê·¼ ì§€ì •ìž ì•ˆì— ë‘”ë‹¤.
+	// private ì ‘ê·¼ ì§€ì •ìž ì•ˆì— ìžˆëŠ” ë©¤ë²„ ë³€ìˆ˜ëŠ” ì´ í´ëž˜ìŠ¤ë¥¼ ë¶€ëª¨ í´ëž˜ìŠ¤ë¡œ ìƒì†ë°›ëŠ” ìžì‹ í´ëž˜ìŠ¤ì—ì„œ ì ‘ê·¼ ì¡°ì°¨ ë¶ˆê°€ëŠ¥í•˜ë‹¤.
+	// í•¨ìˆ˜ë¥¼ í†µí•´ì„œ ì ‘ê·¼í•œë‹¤. í•¨ìˆ˜ëŠ” ë¬´ì¡°ê±´ publicì´ë‹¤.
 
-	// ¼Óµµ¸¦ ÀúÀåÇØ µÑ º¯¼ö ¼±¾ð
-	// EditAnywhere : Å¬·¡½ºÀÇ µðÅ×ÀÏ ÆÐ³ÎÀÌ³ª ºí·çÇÁ¸°Æ®ÀÇ µðÅ×ÀÏ ÆÐ³Î¿¡¼­ ÀÐ°í ¾²±â°¡ °¡´ÉÇÏ´Ù.
-	// BlueprintReadWrite : ºí·çÇÁ¸°Æ® ³ëµå¿¡¼­ ÀÐ°í ¾²±â°¡ °¡´ÉÇÏ´Ù.
-	// Categoty = "Pawn" : Pawn Ç×¸ñ¿¡ º¯¼ö°¡ ³ëÃâµÈ´Ù.
-	//meta = (AllowPrivateAccess = true) : private Á¢±Ù ÁöÁ¤ÀÚ ¾È¿¡ ÀÖ´Â ¸â¹ö º¯¼ö´Â ÀÌ Å¬·¡½º¸¦ ºÎ¸ð
-	// Å¬·¡½º·Î »ó¼Ó¹Þ´Â ÀÚ½ÄÅ¬·¡½º¿¡¼­ Á¶Â÷ Á¢±ÙÀÌ ¾ÈµÈ´Ù.
-	// ÇÏÁö¸¸ ÀÌ Å¬·¡½º¸¦ ºÎ¸ð Å¬·¡½º·Î »ó¼Ó¹Þ´Â ºí·çÇÁ¸°Æ® Å¬·¡½º¿¡¼­´Â Á¢±ÙÀÌ °¡´ÉÇÏ°Ô ÇØÁØ´Ù.
-	// C++ Å¬·¡½º°¡ ºÎ¸ðÅ¬·¡½ºÀÌ°í, ºí·çÇÁ¸°Æ®°¡ ÀÚ½ÄÅ¬·¡½ºÀÌ´Ù.
+	// ì†ë„ë¥¼ ì €ìž¥í•´ ë‘˜ ë³€ìˆ˜ ì„ ì–¸
+	// EditAnywhere : í´ëž˜ìŠ¤ì˜ ë””í…Œì¼ íŒ¨ë„ì´ë‚˜ ë¸”ë£¨í”„ë¦°íŠ¸ì˜ ë””í…Œì¼ íŒ¨ë„ì—ì„œ ì½ê³  ì“°ê¸°ê°€ ê°€ëŠ¥í•˜ë‹¤.
+	// BlueprintReadWrite : ë¸”ë£¨í”„ë¦°íŠ¸ ë…¸ë“œì—ì„œ ì½ê³  ì“°ê¸°ê°€ ê°€ëŠ¥í•˜ë‹¤.
+	// Categoty = "Pawn" : Pawn í•­ëª©ì— ë³€ìˆ˜ê°€ ë…¸ì¶œëœë‹¤.
+	//meta = (AllowPrivateAccess = true) : private ì ‘ê·¼ ì§€ì •ìž ì•ˆì— ìžˆëŠ” ë©¤ë²„ ë³€ìˆ˜ëŠ” ì´ í´ëž˜ìŠ¤ë¥¼ ë¶€ëª¨
+	// í´ëž˜ìŠ¤ë¡œ ìƒì†ë°›ëŠ” ìžì‹í´ëž˜ìŠ¤ì—ì„œ ì¡°ì°¨ ì ‘ê·¼ì´ ì•ˆëœë‹¤.
+	// í•˜ì§€ë§Œ ì´ í´ëž˜ìŠ¤ë¥¼ ë¶€ëª¨ í´ëž˜ìŠ¤ë¡œ ìƒì†ë°›ëŠ” ë¸”ë£¨í”„ë¦°íŠ¸ í´ëž˜ìŠ¤ì—ì„œëŠ” ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ê²Œ í•´ì¤€ë‹¤.
+	// C++ í´ëž˜ìŠ¤ê°€ ë¶€ëª¨í´ëž˜ìŠ¤ì´ê³ , ë¸”ë£¨í”„ë¦°íŠ¸ê°€ ìžì‹í´ëž˜ìŠ¤ì´ë‹¤.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pawn", meta = (AllowPrivateAccess = true))
 	float Speed;
 
-	// Ä³¸¯ÅÍ°¡ °øÁß¿¡ ¶°ÀÖ´ÂÁö ÆÇº°ÇØ ÁÙ ºÒ¸®¾ð º¯¼ö¸¦ ¼±¾ðÇÑ´Ù.
-	// ¾ð¸®¾ó C++ º¯¼öÀÌ¸§À» ÁöÀ» ¶§ ¿µ¹®ÀÚ ´ë¹®ÀÚ·Î ½ÃÀÛÇÑ´Ù.
-	// ºÒ¸®¾ð Å¸ÀÔÀº ¼Ò¹®ÀÚ b·Î ½ÃÀÛÇÑ´Ù. ºÒ¸®¾ð Å¸ÀÔÀº ÀÇ¹®¹®ÀÌ³ª ¸í·É¹® ÇüÅÂ¸¦ Áö´Ñ´Ù.
+	// ìºë¦­í„°ê°€ ê³µì¤‘ì— ë– ìžˆëŠ”ì§€ íŒë³„í•´ ì¤„ ë¶ˆë¦¬ì–¸ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•œë‹¤.
+	// ì–¸ë¦¬ì–¼ C++ ë³€ìˆ˜ì´ë¦„ì„ ì§€ì„ ë•Œ ì˜ë¬¸ìž ëŒ€ë¬¸ìžë¡œ ì‹œìž‘í•œë‹¤.
+	// ë¶ˆë¦¬ì–¸ íƒ€ìž…ì€ ì†Œë¬¸ìž bë¡œ ì‹œìž‘í•œë‹¤. ë¶ˆë¦¬ì–¸ íƒ€ìž…ì€ ì˜ë¬¸ë¬¸ì´ë‚˜ ëª…ë ¹ë¬¸ í˜•íƒœë¥¼ ì§€ë‹Œë‹¤.
 	// bCanSwim, bIsInAir
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pawn", meta = (AllowPrivateAccess = true))
 	bool bIsInAir;
+
+	// í•œì¤„ì£¼ì„
+	/* */	// ì—¬ëŸ¬ì¤„ ì£¼ì„
+	/** */	// ì—¬ëŸ¬ì¤„ ì£¼ì„
 
 };
